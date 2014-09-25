@@ -1,0 +1,120 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "detailView",
+        "designer|userClassName": "DetailView",
+        "itemId": "saveButton"
+    },
+    "name": "MyFormPanel",
+    "designerId": "866fcff5-63f1-45e1-8a5b-a77175b3d229",
+    "cn": [
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": null
+            },
+            "name": "MyFieldSet",
+            "designerId": "35ccf0d8-9504-4c9b-8dee-ddf5af192202",
+            "cn": [
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "name",
+                        "label": "Name",
+                        "name": "name"
+                    },
+                    "name": "MyTextField",
+                    "designerId": "137cdb58-5f74-40a3-9a25-813b5146e001"
+                },
+                {
+                    "type": "Ext.field.TextArea",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "description",
+                        "label": "Description",
+                        "name": "description"
+                    },
+                    "name": "MyTextArea",
+                    "designerId": "4a5ac681-fa99-41c9-94a4-dc4f0ad26a00"
+                },
+                {
+                    "type": "Ext.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "name": "id"
+                    },
+                    "name": "MyHiddenField",
+                    "designerId": "a3bd5b0a-e80a-4fe1-9a90-ef1cadea7e2c"
+                },
+                {
+                    "type": "Ext.field.Select",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "priority",
+                        "label": "Priority",
+                        "name": "priority"
+                    },
+                    "name": "MySelectField",
+                    "designerId": "f4140c49-da54-4bd0-bd63-c998e088fd7d"
+                },
+                {
+                    "type": "Ext.field.Toggle",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Done",
+                        "name": "isCompleted"
+                    },
+                    "name": "MyToggleField",
+                    "designerId": "954522ec-16fa-4e16-a085-e5cdc053b474"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|uiInterfaceName": "action-round",
+                "margin": 10,
+                "text": "Save",
+                "ui": "action-round"
+            },
+            "name": "MyButton1",
+            "designerId": "b37b2edc-2c2b-404f-b53d-a31d0e5af743"
+        }
+    ]
+}

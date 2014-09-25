@@ -1,0 +1,99 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "task",
+        "designer|userClassName": "Task"
+    },
+    "name": "MyModel",
+    "designerId": "c2a80127-3030-48ae-a5a1-1696bd77c545",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "name",
+                "type": "string"
+            },
+            "name": "field",
+            "designerId": "540784a8-b06b-425c-ba07-6a74c379bd91"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "description"
+            },
+            "name": "field1",
+            "designerId": "92d2840b-6139-437f-833b-1edc4522d35a"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "create",
+                "type": "date"
+            },
+            "name": "field2",
+            "designerId": "3f845621-3e4f-4338-a1d7-dc6d58e5e9ef"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "completed",
+                "type": "date"
+            },
+            "name": "field3",
+            "designerId": "1ea453dd-c1cf-46e9-82c8-0631e3dcd476"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "priority",
+                "type": "int"
+            },
+            "name": "field4",
+            "designerId": "b8352c6f-5946-4c96-be91-6ca6274a1c00"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "isCompleted",
+                "type": "boolean"
+            },
+            "name": "field5",
+            "designerId": "1aba363b-9c8d-449d-b0b8-06a776dbd5de"
+        }
+    ]
+}

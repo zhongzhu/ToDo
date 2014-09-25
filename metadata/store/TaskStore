@@ -1,0 +1,63 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "designer|userClassName": "TaskStore",
+        "model": "Task",
+        "storeId": "TaskStore"
+    },
+    "name": "MyStore",
+    "designerId": "14bd3dea-ebb6-4961-b977-f4754f7edc65",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Sql",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "database": "ToDo",
+                "table": "tasks"
+            },
+            "name": "MySqlProxy",
+            "designerId": "e99f66bf-deea-48fe-af53-cbee4e23fab0"
+        },
+        {
+            "type": "Ext.util.Filter",
+            "reference": {
+                "name": "filters",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyFilter",
+            "designerId": "113d6327-2292-46b5-a5ca-2606b3e3ca0c",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|params": [
+                            "item"
+                        ],
+                        "fn": "filterFn",
+                        "implHandler": [
+                            "return !item.data.isComplete;"
+                        ]
+                    },
+                    "name": "filterFn",
+                    "designerId": "1ea2bc4b-a9d3-41cd-9ef3-838099b718c9"
+                }
+            ]
+        }
+    ]
+}

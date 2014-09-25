@@ -1,0 +1,54 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "controllers": [
+            "Main"
+        ],
+        "models": [
+            "Task"
+        ],
+        "name": "ToDo",
+        "stores": [
+            "TaskStore",
+            "CompletedStore"
+        ],
+        "views": [
+            "MainView"
+        ]
+    },
+    "name": "Application",
+    "designerId": "application",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "launch",
+                "implHandler": [
+                    "var TaskStore = Ext.getStore('TaskStore');",
+                    "var CompletedStore = Ext.getStore('CompletedStore');",
+                    "if(CompletedStore.getCount()+TaskStore.getCount() === 0) {",
+                    "    console.log('we have no records');",
+                    "    TaskStore.add({name: 'Here Is A Task', description: 'You can mark the task complete by clicking the Completed button below.', priority: 1, created: Date.now(), completed: '', isComplete: false});",
+                    "    TaskStore.add({name: 'How To Edit A Task', description: 'You can edit the task by clicking the Edit button below.', priority: 2, created: Date.now(), completed: '', isCompleted: false});",
+                    "    TaskStore.add({name: 'How To Add A Task', description: 'Add a task by clicking the Add button in the upper right corner.', priority: 3, created: Date.now(), completed: '', isComplete: false});",
+                    "    TaskStore.sync();",
+                    "} else {",
+                    "    console.log('we have records');",
+                    "}"
+                ]
+            },
+            "name": "launch",
+            "designerId": "a029aab5-0906-4491-817b-032b362649af"
+        }
+    ]
+}

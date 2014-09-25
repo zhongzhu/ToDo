@@ -1,0 +1,179 @@
+{
+    "type": "Ext.tab.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userAlias": "mainView",
+        "designer|userClassName": "MainView",
+        "fullscreen": true
+    },
+    "name": "MyTabPanel",
+    "designerId": "7fd8b6f1-3280-4421-a373-3061ac51c90c",
+    "cn": [
+        {
+            "type": "Ext.tab.Bar",
+            "reference": {
+                "name": "tabBar",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "bottom"
+            },
+            "name": "MyTabBar",
+            "designerId": "04deda45-1736-4ba7-b155-210f60f42fb6"
+        },
+        {
+            "type": "Ext.navigation.View",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "iconCls": "home",
+                "itemId": "todoNavigationView",
+                "title": "ToDo"
+            },
+            "name": "MyNavigationView",
+            "designerId": "8c7612e5-92a2-4c99-9f0b-9e20e65633b4",
+            "cn": [
+                {
+                    "type": "Ext.dataview.List",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "todoList",
+                        "onItemDisclosure": true,
+                        "store": "TaskStore",
+                        "title": "Things to do"
+                    },
+                    "name": "MyList",
+                    "designerId": "e76dab9b-cb37-48ce-a551-cda6c6355f5b",
+                    "cn": [
+                        {
+                            "type": "Ext.XTemplate",
+                            "reference": {
+                                "name": "itemTpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|displayName": "itemTpl",
+                                "implHandler": [
+                                    "<div class=\"priority_{priority}\">{name}</div>"
+                                ]
+                            },
+                            "name": "itemTpl",
+                            "designerId": "949035fe-24d9-4df4-8455-648db66024d3"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.navigation.Bar",
+                    "reference": {
+                        "name": "navigationBar",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "docked": "top"
+                    },
+                    "name": "MyNavigationBar",
+                    "designerId": "ce94fba0-bba4-436a-bea0-0e9b6e5184a0",
+                    "cn": [
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "align": "right",
+                                "iconCls": "add",
+                                "itemId": "addButton",
+                                "text": null
+                            },
+                            "name": "MyButton",
+                            "designerId": "d092109e-bd61-4d1f-a928-d631da005ad0"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.navigation.View",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "iconCls": "organize",
+                "itemId": "doneNavigationView",
+                "title": "Done"
+            },
+            "name": "MyNavigationView1",
+            "designerId": "fe7479b0-ad6a-43e1-9ebe-860071bdda20",
+            "cn": [
+                {
+                    "type": "Ext.dataview.List",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "doneList",
+                        "store": "CompletedStore",
+                        "title": "Things done"
+                    },
+                    "name": "MyList1",
+                    "designerId": "09c6ec1f-c7f2-4298-b542-6ff2bfadc548",
+                    "cn": [
+                        {
+                            "type": "Ext.XTemplate",
+                            "reference": {
+                                "name": "itemTpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|displayName": "itemTpl",
+                                "implHandler": [
+                                    "<div class=\"taskName\">{name}</div> ",
+                                    "<div class=\"taskDescription\">{description}</div> ",
+                                    "<div class=\"taskCreated\">Created: {created}</div>",
+                                    "<div class=\"taskCompleted\">Completed: {completed}</div>"
+                                ]
+                            },
+                            "name": "itemTpl",
+                            "designerId": "c03c5d9b-e22c-4e47-a7ce-0f6638a50c07"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.navigation.Bar",
+                    "reference": {
+                        "name": "navigationBar",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "docked": "top"
+                    },
+                    "name": "MyNavigationBar1",
+                    "designerId": "e7d86b5e-8cb1-42a9-8566-35d112e34760"
+                }
+            ]
+        }
+    ]
+}

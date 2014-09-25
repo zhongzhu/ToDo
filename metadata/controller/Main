@@ -1,0 +1,71 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Main",
+        "requires": [
+            "ToDo.view.DetailView"
+        ]
+    },
+    "name": "MyController",
+    "designerId": "4d836be8-0990-4049-813d-6864dd9cb2f2",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "mainView",
+                "selector": "mainView",
+                "xtype": null
+            },
+            "name": "mainView",
+            "designerId": "644c565a-e310-4962-b5a4-0b8bd9599130"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "todoView",
+                "selector": "mainView #todoNavigationView"
+            },
+            "name": "todoView",
+            "designerId": "96453c3a-289c-44b9-8f84-99f1bc4485d3"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "mainView #todoNavigationView #todoList",
+                "designer|targetType": "Ext.dataview.List",
+                "fn": "onListDisclose",
+                "implHandler": [
+                    "var todoView = this.getTodoView();",
+                    "    todoView.push({",
+                    "        xtype: 'detailView',",
+                    "        title: record.get('name'),",
+                    "        record: record",
+                    "    });"
+                ],
+                "name": "disclose"
+            },
+            "name": "onListDisclose",
+            "designerId": "b554d85e-0339-44da-8fa7-d6706a6d55d4"
+        }
+    ]
+}
