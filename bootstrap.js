@@ -32,7 +32,8 @@ Ext.Loader.addClassPathMappings({
   "Ext.device.sqlite.SQLResultSet": "touch/src/device/sqlite/Sencha.js",
   "Ext.device.sqlite.SQLResultSetRowList": "touch/src/device/sqlite/Sencha.js",
   "Ext.device.sqlite.SQLTransaction": "touch/src/device/sqlite/Sencha.js",
-  "ToDo": "app"
+  "ToDo": "app",
+  "ToDo.controller.ToDo": "app/controller/ToDo.js"
 });
 
 Ext.ClassManager.addNameAlternateMappings({
@@ -531,17 +532,6 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.layout.wrapper.BoxDock": [],
   "Ext.layout.wrapper.Dock": [],
   "Ext.layout.wrapper.Inner": [],
-  "Ext.log.Base": [],
-  "Ext.log.Logger": [],
-  "Ext.log.filter.Filter": [],
-  "Ext.log.filter.Priority": [],
-  "Ext.log.formatter.Default": [],
-  "Ext.log.formatter.Formatter": [],
-  "Ext.log.formatter.Identity": [],
-  "Ext.log.writer.Console": [],
-  "Ext.log.writer.DocumentTitle": [],
-  "Ext.log.writer.Remote": [],
-  "Ext.log.writer.Writer": [],
   "Ext.mixin.Bindable": [],
   "Ext.mixin.Filterable": [],
   "Ext.mixin.Mixin": [],
@@ -666,10 +656,12 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.viewport.WindowsPhone": [
     "Ext.viewport.WP"
   ],
-  "ToDo.controller.Main": [],
+  "ToDo.controller.Detail": [],
+  "ToDo.controller.ToDo": [],
   "ToDo.model.Task": [],
   "ToDo.store.CompletedStore": [],
   "ToDo.store.TaskStore": [],
+  "ToDo.view.AddTaskView": [],
   "ToDo.view.DetailView": [],
   "ToDo.view.MainView": []
 });
@@ -1251,17 +1243,6 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.layout.wrapper.BoxDock": [],
   "Ext.layout.wrapper.Dock": [],
   "Ext.layout.wrapper.Inner": [],
-  "Ext.log.Base": [],
-  "Ext.log.Logger": [],
-  "Ext.log.filter.Filter": [],
-  "Ext.log.filter.Priority": [],
-  "Ext.log.formatter.Default": [],
-  "Ext.log.formatter.Formatter": [],
-  "Ext.log.formatter.Identity": [],
-  "Ext.log.writer.Console": [],
-  "Ext.log.writer.DocumentTitle": [],
-  "Ext.log.writer.Remote": [],
-  "Ext.log.writer.Writer": [],
   "Ext.mixin.Bindable": [],
   "Ext.mixin.Filterable": [],
   "Ext.mixin.Mixin": [],
@@ -1402,12 +1383,16 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.viewport.Ios": [],
   "Ext.viewport.Viewport": [],
   "Ext.viewport.WindowsPhone": [],
-  "ToDo.controller.Main": [],
+  "ToDo.controller.Detail": [],
+  "ToDo.controller.ToDo": [],
   "ToDo.model.Task": [
     "model.task"
   ],
   "ToDo.store.CompletedStore": [],
   "ToDo.store.TaskStore": [],
+  "ToDo.view.AddTaskView": [
+    "widget.addTaskView"
+  ],
   "ToDo.view.DetailView": [
     "widget.detailView"
   ],

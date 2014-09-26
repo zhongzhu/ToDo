@@ -28,22 +28,24 @@ Ext.application({
         'CompletedStore'
     ],
     views: [
-        'MainView'
+        'MainView',
+        'AddTaskView'
     ],
     controllers: [
-        'Main'
+        'ToDo',
+        'Detail'
     ],
     name: 'ToDo',
 
     launch: function() {
-        var TaskStore = Ext.getStore('TaskStore');
-        var CompletedStore = Ext.getStore('CompletedStore');
+        var TaskStore = Ext.getStore('TaskStore'),
+            CompletedStore = Ext.getStore('CompletedStore');
         if(CompletedStore.getCount()+TaskStore.getCount() === 0) {
             console.log('we have no records');
-            TaskStore.add({name: 'Here Is A Task', description: 'You can mark the task complete by clicking the Completed button below.', priority: 1, created: Date.now(), completed: '', isComplete: false});
-            TaskStore.add({name: 'How To Edit A Task', description: 'You can edit the task by clicking the Edit button below.', priority: 2, created: Date.now(), completed: '', isCompleted: false});
-            TaskStore.add({name: 'How To Add A Task', description: 'Add a task by clicking the Add button in the upper right corner.', priority: 3, created: Date.now(), completed: '', isComplete: false});
-            TaskStore.sync();
+        //     TaskStore.add({name: 'Here Is A Task', description: 'You can mark the task complete by clicking the Completed button below.', priority: 1, isComplete: false});
+        //     TaskStore.add({name: 'How To Edit A Task', description: 'You can edit the task by clicking the Edit button below.', priority: 2, isCompleted: false});
+        //     TaskStore.add({name: 'How To Add A Task', description: 'Add a task by clicking the Add button in the upper right corner.', priority: 3, isComplete: false});
+        //     TaskStore.sync();
         } else {
             console.log('we have records');
         }

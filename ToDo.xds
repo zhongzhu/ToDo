@@ -24,7 +24,11 @@
         "cacheBust": false,
         "buildShouldOverwriteIndex": true,
         "generateArchitectVersion": true,
-        "projectHasEnabledWebServer": true
+        "projectHasEnabledWebServer": true,
+        "lastBuildSelection": {
+            "value": "webBuild",
+            "display": "Build web app"
+        }
     },
     "xdsVersion": "3.1.0",
     "xdsBuild": 1903,
@@ -34,14 +38,16 @@
     "viewOrderMap": {
         "view": [
             "7fd8b6f1-3280-4421-a373-3061ac51c90c",
-            "866fcff5-63f1-45e1-8a5b-a77175b3d229"
+            "866fcff5-63f1-45e1-8a5b-a77175b3d229",
+            "f9673dec-0590-4949-ac4c-04699da68b95"
         ],
         "store": [
             "14bd3dea-ebb6-4961-b977-f4754f7edc65",
             "cdca7b10-ff46-4a73-9f92-cebbf79a22cd"
         ],
         "controller": [
-            "4d836be8-0990-4049-813d-6864dd9cb2f2"
+            "4d836be8-0990-4049-813d-6864dd9cb2f2",
+            "1e878c6c-d5de-4cac-8cbb-8818ce0646e1"
         ],
         "model": [
             "c2a80127-3030-48ae-a5a1-1696bd77c545"

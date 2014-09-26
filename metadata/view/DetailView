@@ -8,7 +8,7 @@
     "userConfig": {
         "designer|userAlias": "detailView",
         "designer|userClassName": "DetailView",
-        "itemId": "saveButton"
+        "itemId": null
     },
     "name": "MyFormPanel",
     "designerId": "866fcff5-63f1-45e1-8a5b-a77175b3d229",
@@ -36,7 +36,8 @@
                     "userConfig": {
                         "itemId": "name",
                         "label": "Name",
-                        "name": "name"
+                        "name": "name",
+                        "required": true
                     },
                     "name": "MyTextField",
                     "designerId": "137cdb58-5f74-40a3-9a25-813b5146e001"
@@ -79,7 +80,12 @@
                     "userConfig": {
                         "itemId": "priority",
                         "label": "Priority",
-                        "name": "priority"
+                        "name": "priority",
+                        "options": [
+                            "[{text: 'High',  value: 1},",
+                            "{text: 'Medium', value: 2},",
+                            "{text: 'Low',  value: 3}]"
+                        ]
                     },
                     "name": "MySelectField",
                     "designerId": "f4140c49-da54-4bd0-bd63-c998e088fd7d"
@@ -109,12 +115,30 @@
             "codeClass": null,
             "userConfig": {
                 "designer|uiInterfaceName": "action-round",
+                "itemId": "saveButton",
                 "margin": 10,
                 "text": "Save",
                 "ui": "action-round"
             },
             "name": "MyButton1",
             "designerId": "b37b2edc-2c2b-404f-b53d-a31d0e5af743"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|uiInterfaceName": "decline-round",
+                "itemId": "deleteButton",
+                "margin": 10,
+                "text": "Delete",
+                "ui": "decline-round"
+            },
+            "name": "MyButton2",
+            "designerId": "340a0a75-62fe-45dc-bfa0-f3b9e164e84f"
         }
     ]
 }

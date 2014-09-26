@@ -28,15 +28,8 @@ Ext.define('ToDo.model.Task', {
                 type: 'string'
             },
             {
-                name: 'description'
-            },
-            {
-                name: 'create',
-                type: 'date'
-            },
-            {
-                name: 'completed',
-                type: 'date'
+                name: 'description',
+                type: 'string'
             },
             {
                 name: 'priority',

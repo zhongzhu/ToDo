@@ -35,6 +35,9 @@
                 "type": "object"
             },
             "codeClass": null,
+            "userConfig": {
+                "property": null
+            },
             "name": "MyFilter1",
             "designerId": "16ce049d-d42f-40e9-a11f-957bfce3621f",
             "cn": [
@@ -51,7 +54,7 @@
                         ],
                         "fn": "filterFn",
                         "implHandler": [
-                            "return item.data.isComplete;"
+                            "return item.data.isCompleted;"
                         ]
                     },
                     "name": "filterFn",

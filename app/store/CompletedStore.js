@@ -33,7 +33,7 @@ Ext.define('ToDo.store.CompletedStore', {
         },
         filters: {
             filterFn: function(item) {
-                return item.data.isComplete;
+                return item.data.isCompleted;
             }
         }
     }

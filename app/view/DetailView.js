@@ -27,7 +27,6 @@ Ext.define('ToDo.view.DetailView', {
     ],
 
     config: {
-        itemId: 'saveButton',
         items: [
             {
                 xtype: 'fieldset',
@@ -36,7 +35,8 @@ Ext.define('ToDo.view.DetailView', {
                         xtype: 'textfield',
                         itemId: 'name',
                         label: 'Name',
-                        name: 'name'
+                        name: 'name',
+                        required: true
                     },
                     {
                         xtype: 'textareafield',
@@ -52,7 +52,21 @@ Ext.define('ToDo.view.DetailView', {
                         xtype: 'selectfield',
                         itemId: 'priority',
                         label: 'Priority',
-                        name: 'priority'
+                        name: 'priority',
+                        options: [
+                            {
+                                text: 'High',
+                                value: 1
+                            },
+                            {
+                                text: 'Medium',
+                                value: 2
+                            },
+                            {
+                                text: 'Low',
+                                value: 3
+                            }
+                        ]
                     },
                     {
                         xtype: 'togglefield',
@@ -63,9 +77,17 @@ Ext.define('ToDo.view.DetailView', {
             },
             {
                 xtype: 'button',
+                itemId: 'saveButton',
                 margin: 10,
                 ui: 'action-round',
                 text: 'Save'
+            },
+            {
+                xtype: 'button',
+                itemId: 'deleteButton',
+                margin: 10,
+                ui: 'decline-round',
+                text: 'Delete'
             }
         ]
     }

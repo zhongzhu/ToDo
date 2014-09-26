@@ -1,0 +1,100 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "addTaskView",
+        "designer|userClassName": "AddTaskView",
+        "itemId": "saveButton"
+    },
+    "name": "DetailView1",
+    "designerId": "f9673dec-0590-4949-ac4c-04699da68b95",
+    "cn": [
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": null
+            },
+            "name": "MyFieldSet",
+            "designerId": "2f6af062-2474-43a8-ad62-cd6736db7e1c",
+            "cn": [
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "name",
+                        "label": "Name",
+                        "name": "name",
+                        "required": true
+                    },
+                    "name": "MyTextField",
+                    "designerId": "036ca069-f7fb-42ec-a575-f8a88a0a4051"
+                },
+                {
+                    "type": "Ext.field.TextArea",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "description",
+                        "label": "Description",
+                        "name": "description"
+                    },
+                    "name": "MyTextArea",
+                    "designerId": "591ef0f9-37b8-4175-8ba4-b41ef2eddbfe"
+                },
+                {
+                    "type": "Ext.field.Select",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "priority",
+                        "label": "Priority",
+                        "name": "priority",
+                        "options": [
+                            "[{text: 'High',  value: 1},",
+                            "{text: 'Medium', value: 2},",
+                            "{text: 'Low',  value: 3}]"
+                        ]
+                    },
+                    "name": "MySelectField",
+                    "designerId": "b66097d4-9826-4fe6-b450-9bc6301eca08"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|uiInterfaceName": "action-round",
+                "itemId": "saveButton",
+                "margin": 10,
+                "text": "Save",
+                "ui": "action-round"
+            },
+            "name": "MyButton1",
+            "designerId": "f6df4229-2353-4a1b-992f-39313dbb9b30"
+        }
+    ]
+}

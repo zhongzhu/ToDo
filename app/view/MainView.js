@@ -40,17 +40,18 @@ Ext.define('ToDo.view.MainView', {
                 items: [
                     {
                         xtype: 'list',
-                        title: 'Things to do',
+                        title: 'To Do List',
                         itemId: 'todoList',
                         itemTpl: [
-                            '<div class="priority_{priority}">{name}</div>'
+                            '<div class="priority_{priority}">P{priority} {name}</div>'
                         ],
                         store: 'TaskStore',
-                        onItemDisclosure: true
+                        onItemDisclosure: false
                     }
                 ],
                 navigationBar: {
                     docked: 'top',
+                    itemId: 'todoNavBar',
                     items: [
                         {
                             xtype: 'button',
@@ -69,13 +70,10 @@ Ext.define('ToDo.view.MainView', {
                 items: [
                     {
                         xtype: 'list',
-                        title: 'Things done',
+                        title: 'Completed',
                         itemId: 'doneList',
                         itemTpl: [
-                            '<div class="taskName">{name}</div> ',
-                            '<div class="taskDescription">{description}</div> ',
-                            '<div class="taskCreated">Created: {created}</div>',
-                            '<div class="taskCompleted">Completed: {completed}</div>'
+                            '<div class="priority_{priority}">P{priority} {name}</div>'
                         ],
                         store: 'CompletedStore'
                     }

@@ -51,9 +51,9 @@
                     "codeClass": null,
                     "userConfig": {
                         "itemId": "todoList",
-                        "onItemDisclosure": true,
+                        "onItemDisclosure": false,
                         "store": "TaskStore",
-                        "title": "Things to do"
+                        "title": "To Do List"
                     },
                     "name": "MyList",
                     "designerId": "e76dab9b-cb37-48ce-a551-cda6c6355f5b",
@@ -68,7 +68,7 @@
                             "userConfig": {
                                 "designer|displayName": "itemTpl",
                                 "implHandler": [
-                                    "<div class=\"priority_{priority}\">{name}</div>"
+                                    "<div class=\"priority_{priority}\">P{priority} {name}</div>"
                                 ]
                             },
                             "name": "itemTpl",
@@ -84,7 +84,8 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "docked": "top"
+                        "docked": "top",
+                        "itemId": "todoNavBar"
                     },
                     "name": "MyNavigationBar",
                     "designerId": "ce94fba0-bba4-436a-bea0-0e9b6e5184a0",
@@ -134,7 +135,7 @@
                     "userConfig": {
                         "itemId": "doneList",
                         "store": "CompletedStore",
-                        "title": "Things done"
+                        "title": "Completed"
                     },
                     "name": "MyList1",
                     "designerId": "09c6ec1f-c7f2-4298-b542-6ff2bfadc548",
@@ -149,10 +150,7 @@
                             "userConfig": {
                                 "designer|displayName": "itemTpl",
                                 "implHandler": [
-                                    "<div class=\"taskName\">{name}</div> ",
-                                    "<div class=\"taskDescription\">{description}</div> ",
-                                    "<div class=\"taskCreated\">Created: {created}</div>",
-                                    "<div class=\"taskCompleted\">Completed: {completed}</div>"
+                                    "<div class=\"priority_{priority}\">P{priority} {name}</div>"
                                 ]
                             },
                             "name": "itemTpl",

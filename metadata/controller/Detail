@@ -1,0 +1,100 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Detail",
+        "requires": [
+            "ToDo.view.DetailView",
+            "ToDo.view.MainView"
+        ]
+    },
+    "name": "MyController",
+    "designerId": "1e878c6c-d5de-4cac-8cbb-8818ce0646e1",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "todoView",
+                "selector": "mainView #todoNavigationView",
+                "xtype": null
+            },
+            "name": "todoView",
+            "designerId": "1b603f2f-d682-4d89-8855-f76d852a066f"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "detailView",
+                "selector": "detailView"
+            },
+            "name": "detailView",
+            "designerId": "1c30a213-2a4e-47db-9d68-4d4dba0457a5"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "detailView #saveButton",
+                "designer|targetType": "Ext.Button",
+                "fn": "onSaveButtonTap",
+                "implHandler": [
+                    "var detailView = this.getDetailView(),",
+                    "    values = detailView.getValues(),",
+                    "    record = detailView.getRecord(),",
+                    "    store = Ext.getStore('TaskStore');",
+                    "record.setData(values);",
+                    "record.setDirty();",
+                    "store.sync();",
+                    "",
+                    "this.getTodoView().pop();"
+                ],
+                "name": "tap"
+            },
+            "name": "onSaveButtonTap",
+            "designerId": "20dd20e3-188c-4b64-af92-b89aa831d691"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "detailView #deleteButton",
+                "designer|targetType": "Ext.Button",
+                "fn": "onDeleteButtonTap",
+                "implHandler": [
+                    "var detailView = this.getDetailView(),",
+                    "    record = detailView.getRecord(),",
+                    "    store = Ext.getStore('TaskStore');",
+                    "store.remove(record);",
+                    "store.sync();",
+                    "",
+                    "this.getTodoView().pop();"
+                ],
+                "name": "tap"
+            },
+            "name": "onDeleteButtonTap",
+            "designerId": "a6ed7054-8af6-40df-a59c-34b67015ed68"
+        }
+    ]
+}

@@ -34,38 +34,11 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "description"
+                "name": "description",
+                "type": "string"
             },
             "name": "field1",
             "designerId": "92d2840b-6139-437f-833b-1edc4522d35a"
-        },
-        {
-            "type": "Ext.data.Field",
-            "reference": {
-                "name": "fields",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "name": "create",
-                "type": "date"
-            },
-            "name": "field2",
-            "designerId": "3f845621-3e4f-4338-a1d7-dc6d58e5e9ef"
-        },
-        {
-            "type": "Ext.data.Field",
-            "reference": {
-                "name": "fields",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "name": "completed",
-                "type": "date"
-            },
-            "name": "field3",
-            "designerId": "1ea453dd-c1cf-46e9-82c8-0631e3dcd476"
         },
         {
             "type": "Ext.data.Field",
