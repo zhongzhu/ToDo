@@ -35,29 +35,14 @@
                 "type": "object"
             },
             "codeClass": null,
+            "userConfig": {
+                "property": "isCompleted",
+                "value": [
+                    "false"
+                ]
+            },
             "name": "MyFilter",
-            "designerId": "d95e6a3a-4aaf-4b0f-aaa3-ac210182842f",
-            "cn": [
-                {
-                    "type": "fixedfunction",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "designer|params": [
-                            "item"
-                        ],
-                        "fn": "filterFn",
-                        "implHandler": [
-                            "return !item.data.isCompleted;"
-                        ]
-                    },
-                    "name": "filterFn",
-                    "designerId": "2dbef848-d713-4900-b35f-0cef7180b2ac"
-                }
-            ]
+            "designerId": "d95e6a3a-4aaf-4b0f-aaa3-ac210182842f"
         }
     ]
 }

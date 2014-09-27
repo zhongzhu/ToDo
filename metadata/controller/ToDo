@@ -122,34 +122,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|controlQuery": "addTaskView #saveButton",
-                "designer|targetType": "Ext.Button",
-                "fn": "onSaveNewTaskButtonTap",
-                "implHandler": [
-                    "console.log('onSaveNewTaskButtonTap');",
-                    "var todoView = this.getTodoView(),",
-                    "    values = this.getAddTaskView().getValues(),",
-                    "    store = Ext.getStore('TaskStore');",
-                    "",
-                    "values.isCompleted = false;",
-                    "store.add(values);",
-                    "store.sync();",
-                    "",
-                    "todoView.pop();"
-                ],
-                "name": "tap"
-            },
-            "name": "onSaveNewTaskButtonTap",
-            "designerId": "cd4fbc4b-98a7-486c-8ceb-0077d9356f00"
-        },
-        {
-            "type": "controlleraction",
-            "reference": {
-                "name": "listeners",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
                 "designer|controlQuery": "mainView #todoNavigationView #todoList",
                 "designer|targetType": "Ext.dataview.List",
                 "fn": "onListItemSwipe",

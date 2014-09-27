@@ -8,7 +8,8 @@
     "userConfig": {
         "controllers": [
             "ToDo",
-            "Detail"
+            "Detail",
+            "AddTask"
         ],
         "models": [
             "Task"

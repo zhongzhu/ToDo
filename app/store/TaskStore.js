@@ -32,9 +32,8 @@ Ext.define('ToDo.store.TaskStore', {
             table: 'tasks'
         },
         filters: {
-            filterFn: function(item) {
-                return !item.data.isCompleted;
-            }
+            property: 'isCompleted',
+            value: false
         }
     }
 });

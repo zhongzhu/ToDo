@@ -1,0 +1,74 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "AddTask"
+    },
+    "name": "MyController",
+    "designerId": "493d11c3-0b5e-442a-9a20-ae713a974842",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "addTaskView",
+                "selector": "addTaskView"
+            },
+            "name": "addTaskView",
+            "designerId": "79d2fdfd-4d5e-463a-924e-d2b105f5a93a"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "todoView",
+                "selector": "mainView #todoNavigationView"
+            },
+            "name": "todoView",
+            "designerId": "a250c27c-0d33-4f1c-8fca-a86173187400"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "addTaskView #saveButton",
+                "designer|targetType": "Ext.Button",
+                "fn": "onSave",
+                "implHandler": [
+                    "console.log('Going to save new task');",
+                    "var todoView = this.getTodoView(),",
+                    "    values = this.getAddTaskView().getValues(),",
+                    "    store = Ext.getStore('TaskStore');",
+                    "",
+                    "values.isCompleted = false;",
+                    "store.add(values);",
+                    "// var record = Ext.create('ToDo.model.Task', values);",
+                    "// record.set('isCompleted', false);",
+                    "// store.add(record);",
+                    "store.sync();",
+                    "",
+                    "todoView.pop();"
+                ],
+                "name": "tap"
+            },
+            "name": "onSave",
+            "designerId": "de89e6ed-3dc3-4417-93bf-b2aafca40e26"
+        }
+    ]
+}

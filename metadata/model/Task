@@ -7,7 +7,13 @@
     "codeClass": null,
     "userConfig": {
         "designer|userAlias": "task",
-        "designer|userClassName": "Task"
+        "designer|userClassName": "Task",
+        "identifier": [
+            "{\"type\":\"uuid\"}"
+        ],
+        "requires": [
+            "Ext.data.identifier.Uuid"
+        ]
     },
     "name": "MyModel",
     "designerId": "c2a80127-3030-48ae-a5a1-1696bd77c545",
@@ -67,6 +73,20 @@
             },
             "name": "field5",
             "designerId": "1aba363b-9c8d-449d-b0b8-06a776dbd5de"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id",
+                "type": "auto"
+            },
+            "name": "field2",
+            "designerId": "6d0c3f24-6f8a-414f-b57d-0d1e245ceb52"
         }
     ]
 }

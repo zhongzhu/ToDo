@@ -18,10 +18,14 @@ Ext.define('ToDo.model.Task', {
     alias: 'model.task',
 
     requires: [
-        'Ext.data.Field'
+        'Ext.data.Field',
+        'Ext.data.identifier.Uuid'
     ],
 
     config: {
+        identifier: {
+            type: 'uuid'
+        },
         fields: [
             {
                 name: 'name',
@@ -38,6 +42,10 @@ Ext.define('ToDo.model.Task', {
             {
                 name: 'isCompleted',
                 type: 'boolean'
+            },
+            {
+                name: 'id',
+                type: 'auto'
             }
         ]
     }

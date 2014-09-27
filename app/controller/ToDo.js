@@ -35,9 +35,6 @@ Ext.define('ToDo.controller.ToDo', {
             },
             "mainView #todoNavigationView #todoNavBar #addButton": {
                 tap: 'onAddButtonTap'
-            },
-            "addTaskView #saveButton": {
-                tap: 'onSaveNewTaskButtonTap'
             }
         }
     },
@@ -66,19 +63,6 @@ Ext.define('ToDo.controller.ToDo', {
 
     onListShow: function(component, eOpts) {
         this.getTodoView().down('#todoNavBar #addButton').show();
-    },
-
-    onSaveNewTaskButtonTap: function(button, e, eOpts) {
-        console.log('onSaveNewTaskButtonTap');
-        var todoView = this.getTodoView(),
-            values = this.getAddTaskView().getValues(),
-            store = Ext.getStore('TaskStore');
-
-        values.isCompleted = false;
-        store.add(values);
-        store.sync();
-
-        todoView.pop();
     },
 
     onListItemSwipe: function(dataview, index, target, record, e, eOpts) {

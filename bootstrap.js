@@ -656,7 +656,9 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.viewport.WindowsPhone": [
     "Ext.viewport.WP"
   ],
+  "ToDo.controller.AddTask": [],
   "ToDo.controller.Detail": [],
+  "ToDo.controller.Main": [],
   "ToDo.controller.ToDo": [],
   "ToDo.model.Task": [],
   "ToDo.store.CompletedStore": [],
@@ -1383,7 +1385,9 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.viewport.Ios": [],
   "Ext.viewport.Viewport": [],
   "Ext.viewport.WindowsPhone": [],
+  "ToDo.controller.AddTask": [],
   "ToDo.controller.Detail": [],
+  "ToDo.controller.Main": [],
   "ToDo.controller.ToDo": [],
   "ToDo.model.Task": [
     "model.task"

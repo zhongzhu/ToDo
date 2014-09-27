@@ -44,7 +44,14 @@ Ext.define('ToDo.controller.Detail', {
             store = Ext.getStore('TaskStore');
         record.setData(values);
         record.setDirty();
+
+        if (record.isCompleted) {
+            var completedStore = Ext.getStore('CompletedStore');
+            completedStore.add(record);
+        }
+
         store.sync();
+        console.log(store);
 
         this.getTodoView().pop();
     },
