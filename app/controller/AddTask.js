@@ -41,6 +41,7 @@ Ext.define('ToDo.controller.AddTask', {
         // record.set('isCompleted', false);
         // store.add(record);
         store.sync();
+        console.log('store.getCount():' + store.getCount());
 
         todoView.pop();
     }

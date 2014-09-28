@@ -70,8 +70,8 @@ Ext.define('ToDo.controller.ToDo', {
         var actionSheet = Ext.create('Ext.ActionSheet', {
             items: [
                 {
-                    text: 'Done',
-                    ui  : 'confirm',
+                    text: 'Delete this task',
+                    ui  : 'decline',
                     handler: function(button, e, eOpts) {
                         var record = actionSheet.getRecord(),
                         store = Ext.getStore('TaskStore');
@@ -84,7 +84,7 @@ Ext.define('ToDo.controller.ToDo', {
                 },
                 {
                     text: 'Cancel',
-                    ui  : 'decline',
+                    ui  : 'confirm',
                     handler: function() {actionSheet.hide();}
                 }
             ]
