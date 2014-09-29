@@ -66,9 +66,9 @@
                     "    var completedStore = Ext.getStore('CompletedStore');",
                     "    completedStore.add(record);",
                     "    console.log('completedStore.getCount():' + completedStore.getCount());",
-                    "} ",
+                    "}",
                     "store.sync();",
-                    "",
+                    "store.load();",
                     "this.getTodoView().pop();"
                 ],
                 "name": "tap"

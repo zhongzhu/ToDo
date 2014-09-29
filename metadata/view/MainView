@@ -68,7 +68,7 @@
                             "userConfig": {
                                 "designer|displayName": "itemTpl",
                                 "implHandler": [
-                                    "<div class=\"priority_{priority}\">P{priority} {name}</div>"
+                                    "<div>P{priority}. {name}</div>"
                                 ]
                             },
                             "name": "itemTpl",
@@ -150,7 +150,7 @@
                             "userConfig": {
                                 "designer|displayName": "itemTpl",
                                 "implHandler": [
-                                    "<div class=\"priority_{priority}\">P{priority} {name}</div>"
+                                    "<div>P{priority}. {name}</div>"
                                 ]
                             },
                             "name": "itemTpl",

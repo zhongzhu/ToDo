@@ -57,7 +57,7 @@ Ext.define('ToDo.controller.ToDo', {
         this.getTodoView().down('#todoNavBar #addButton').hide();
         todoView.push({
                     xtype: 'addTaskView',
-                    title: 'Add a new task',
+                    title: 'Add a new task'
                 });
     },
 

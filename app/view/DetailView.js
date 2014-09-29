@@ -42,7 +42,8 @@ Ext.define('ToDo.view.DetailView', {
                         xtype: 'textareafield',
                         itemId: 'description',
                         label: 'Description',
-                        name: 'description'
+                        name: 'description',
+                        maxRows: 3
                     },
                     {
                         xtype: 'hiddenfield',

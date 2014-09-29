@@ -43,7 +43,7 @@ Ext.define('ToDo.view.MainView', {
                         title: 'To Do List',
                         itemId: 'todoList',
                         itemTpl: [
-                            '<div class="priority_{priority}">P{priority} {name}</div>'
+                            '<div>P{priority}. {name}</div>'
                         ],
                         store: 'TaskStore',
                         onItemDisclosure: false
@@ -73,7 +73,7 @@ Ext.define('ToDo.view.MainView', {
                         title: 'Completed',
                         itemId: 'doneList',
                         itemTpl: [
-                            '<div class="priority_{priority}">P{priority} {name}</div>'
+                            '<div>P{priority}. {name}</div>'
                         ],
                         store: 'CompletedStore'
                     }

@@ -52,6 +52,7 @@
                     "userConfig": {
                         "itemId": "description",
                         "label": "Description",
+                        "maxRows": 3,
                         "name": "description"
                     },
                     "name": "MyTextArea",

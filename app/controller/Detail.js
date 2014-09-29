@@ -50,7 +50,7 @@ Ext.define('ToDo.controller.Detail', {
             console.log('completedStore.getCount():' + completedStore.getCount());
         }
         store.sync();
-
+        store.load();
         this.getTodoView().pop();
     },
 

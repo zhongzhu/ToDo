@@ -36,10 +36,8 @@ Ext.define('ToDo.controller.AddTask', {
             store = Ext.getStore('TaskStore');
 
         values.isCompleted = false;
-        store.add(values);
-        // var record = Ext.create('ToDo.model.Task', values);
-        // record.set('isCompleted', false);
-        // store.add(record);
+        var record = Ext.create('ToDo.model.Task', values);
+        store.add(record);
         store.sync();
         console.log('store.getCount():' + store.getCount());
 
