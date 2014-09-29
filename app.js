@@ -34,7 +34,8 @@ Ext.application({
     controllers: [
         'ToDo',
         'Detail',
-        'AddTask'
+        'AddTask',
+        'Done'
     ],
     name: 'ToDo',
 

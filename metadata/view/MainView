@@ -53,7 +53,7 @@
                         "itemId": "todoList",
                         "onItemDisclosure": false,
                         "store": "TaskStore",
-                        "title": "To Do List"
+                        "title": "Things to do"
                     },
                     "name": "MyList",
                     "designerId": "e76dab9b-cb37-48ce-a551-cda6c6355f5b",
@@ -101,7 +101,8 @@
                                 "align": "right",
                                 "iconCls": "add",
                                 "itemId": "addButton",
-                                "text": null
+                                "text": null,
+                                "ui": null
                             },
                             "name": "MyButton",
                             "designerId": "d092109e-bd61-4d1f-a928-d631da005ad0"
@@ -135,7 +136,7 @@
                     "userConfig": {
                         "itemId": "doneList",
                         "store": "CompletedStore",
-                        "title": "Completed"
+                        "title": "What's done"
                     },
                     "name": "MyList1",
                     "designerId": "09c6ec1f-c7f2-4298-b542-6ff2bfadc548",
@@ -166,10 +167,30 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "docked": "top"
+                        "docked": "top",
+                        "itemId": "doneNavBar"
                     },
                     "name": "MyNavigationBar1",
-                    "designerId": "e7d86b5e-8cb1-42a9-8566-35d112e34760"
+                    "designerId": "e7d86b5e-8cb1-42a9-8566-35d112e34760",
+                    "cn": [
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "align": "right",
+                                "iconCls": "delete",
+                                "itemId": "clearAllButton",
+                                "text": null,
+                                "ui": null
+                            },
+                            "name": "MyButton3",
+                            "designerId": "1ca96576-616c-4c22-95bd-d630bfcb0f6c"
+                        }
+                    ]
                 }
             ]
         }

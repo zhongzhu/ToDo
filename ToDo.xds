@@ -16,7 +16,7 @@
             "viewportOrientation": "portrait"
         },
         "urlPrefix": "http://localhost:1841",
-        "exportPath": "",
+        "exportPath": "C:/zhongzhu/repository/things/1",
         "spacesToIndent": 4,
         "sdkPath": "",
         "lineEnding": "CRLF",
@@ -48,7 +48,8 @@
         "controller": [
             "4d836be8-0990-4049-813d-6864dd9cb2f2",
             "1e878c6c-d5de-4cac-8cbb-8818ce0646e1",
-            "493d11c3-0b5e-442a-9a20-ae713a974842"
+            "493d11c3-0b5e-442a-9a20-ae713a974842",
+            "fbba5b07-960c-4e3a-aaa6-402725648a20"
         ],
         "model": [
             "c2a80127-3030-48ae-a5a1-1696bd77c545"

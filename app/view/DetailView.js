@@ -30,6 +30,8 @@ Ext.define('ToDo.view.DetailView', {
         items: [
             {
                 xtype: 'fieldset',
+                disabled: false,
+                itemId: 'detailFieldSet',
                 items: [
                     {
                         xtype: 'textfield',

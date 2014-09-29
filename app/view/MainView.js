@@ -40,7 +40,7 @@ Ext.define('ToDo.view.MainView', {
                 items: [
                     {
                         xtype: 'list',
-                        title: 'To Do List',
+                        title: 'Things to do',
                         itemId: 'todoList',
                         itemTpl: [
                             '<div>P{priority}. {name}</div>'
@@ -70,7 +70,7 @@ Ext.define('ToDo.view.MainView', {
                 items: [
                     {
                         xtype: 'list',
-                        title: 'Completed',
+                        title: 'What\'s done',
                         itemId: 'doneList',
                         itemTpl: [
                             '<div>P{priority}. {name}</div>'
@@ -79,7 +79,16 @@ Ext.define('ToDo.view.MainView', {
                     }
                 ],
                 navigationBar: {
-                    docked: 'top'
+                    docked: 'top',
+                    itemId: 'doneNavBar',
+                    items: [
+                        {
+                            xtype: 'button',
+                            align: 'right',
+                            itemId: 'clearAllButton',
+                            iconCls: 'delete'
+                        }
+                    ]
                 }
             }
         ]

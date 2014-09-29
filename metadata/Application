@@ -9,7 +9,8 @@
         "controllers": [
             "ToDo",
             "Detail",
-            "AddTask"
+            "AddTask",
+            "Done"
         ],
         "models": [
             "Task"

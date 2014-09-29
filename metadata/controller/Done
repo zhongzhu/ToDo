@@ -1,0 +1,78 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Done"
+    },
+    "name": "MyController",
+    "designerId": "fbba5b07-960c-4e3a-aaa6-402725648a20",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "doneView",
+                "selector": "mainView #doneNavigationView"
+            },
+            "name": "doneView",
+            "designerId": "27a985d9-8ada-4082-b108-79f5838a918f"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "mainView #doneNavigationView #doneNavBar #clearAllButton",
+                "designer|targetType": "Ext.Button",
+                "fn": "onClearAllButtonTap",
+                "implHandler": [
+                    "var store = Ext.getStore('CompletedStore');",
+                    "store.removeAll();",
+                    "store.sync();"
+                ],
+                "name": "tap"
+            },
+            "name": "onClearAllButtonTap",
+            "designerId": "a75c5515-bc19-49da-81a6-47e45eae56c6"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "mainView #doneNavigationView #doneList",
+                "designer|targetType": "Ext.dataview.List",
+                "fn": "onDoneListItemTap",
+                "implHandler": [
+                    "var doneView = this.getDoneView();",
+                    "",
+                    "var detailView = doneView.push({",
+                    "    xtype: 'detailView',",
+                    "    title: record.get('name'),",
+                    "    record: record",
+                    "});",
+                    "",
+                    "detailView.down('#detailFieldSet').disable();",
+                    "detailView.down('#saveButton').hide();"
+                ],
+                "name": "itemtap"
+            },
+            "name": "onDoneListItemTap",
+            "designerId": "471c848a-7a8a-4085-8358-f94e4eb9f064"
+        }
+    ]
+}

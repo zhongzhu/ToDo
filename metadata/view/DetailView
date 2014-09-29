@@ -21,6 +21,8 @@
             },
             "codeClass": null,
             "userConfig": {
+                "disabled": false,
+                "itemId": "detailFieldSet",
                 "title": null
             },
             "name": "MyFieldSet",
