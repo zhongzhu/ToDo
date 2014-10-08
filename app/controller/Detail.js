@@ -23,6 +23,7 @@ Ext.define('ToDo.controller.Detail', {
 
     config: {
         refs: {
+            doneView: 'mainView #doneNavigationView',
             todoView: 'mainView #todoNavigationView',
             detailView: 'detailView'
         },
@@ -47,7 +48,6 @@ Ext.define('ToDo.controller.Detail', {
         if (record.get('isCompleted')) {
             var completedStore = Ext.getStore('CompletedStore');
             completedStore.add(record);
-            console.log('completedStore.getCount():' + completedStore.getCount());
         }
         store.sync();
         store.load();
@@ -55,14 +55,23 @@ Ext.define('ToDo.controller.Detail', {
     },
 
     onDeleteButtonTap: function(button, e, eOpts) {
-        var detailView = this.getDetailView(),
-            record = detailView.getRecord(),
+        var record = this.getDetailView().getRecord(),
+            store = null,
+            navView = null;
+
+        console.log(record.data);
+        if (record.get('isCompleted')) {
+            store = Ext.getStore('CompletedStore');
+            navView = this.getDoneView();
+        } else {
             store = Ext.getStore('TaskStore');
+            navView = this.getTodoView();
+        }
+
         store.remove(record);
         store.sync();
-        console.log('store.getCount():' + store.getCount());
 
-        this.getTodoView().pop();
+        navView.pop();
     }
 
 });

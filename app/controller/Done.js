@@ -26,7 +26,8 @@ Ext.define('ToDo.controller.Done', {
                 tap: 'onClearAllButtonTap'
             },
             "mainView #doneNavigationView #doneList": {
-                itemtap: 'onDoneListItemTap'
+                itemtap: 'onDoneListItemTap',
+                show: 'onListShow'
             }
         }
     },
@@ -39,6 +40,7 @@ Ext.define('ToDo.controller.Done', {
 
     onDoneListItemTap: function(dataview, index, target, record, e, eOpts) {
         var doneView = this.getDoneView();
+        doneView.down('#doneNavBar #clearAllButton').hide();
 
         var detailView = doneView.push({
             xtype: 'detailView',
@@ -48,6 +50,10 @@ Ext.define('ToDo.controller.Done', {
 
         detailView.down('#detailFieldSet').disable();
         detailView.down('#saveButton').hide();
+    },
+
+    onListShow: function(component, eOpts) {
+        this.getDoneView().down('#doneNavBar #clearAllButton').show();
     }
 
 });

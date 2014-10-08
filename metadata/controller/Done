@@ -59,6 +59,7 @@
                 "fn": "onDoneListItemTap",
                 "implHandler": [
                     "var doneView = this.getDoneView();",
+                    "doneView.down('#doneNavBar #clearAllButton').hide();",
                     "",
                     "var detailView = doneView.push({",
                     "    xtype: 'detailView',",
@@ -73,6 +74,25 @@
             },
             "name": "onDoneListItemTap",
             "designerId": "471c848a-7a8a-4085-8358-f94e4eb9f064"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "mainView #doneNavigationView #doneList",
+                "designer|targetType": "Ext.dataview.List",
+                "fn": "onListShow",
+                "implHandler": [
+                    "this.getDoneView().down('#doneNavBar #clearAllButton').show();"
+                ],
+                "name": "show"
+            },
+            "name": "onListShow",
+            "designerId": "4a8f0b9f-8498-48bf-abdc-1a9b5e897aac"
         }
     ]
 }

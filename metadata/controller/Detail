@@ -23,6 +23,20 @@
             },
             "codeClass": null,
             "userConfig": {
+                "ref": "doneView",
+                "selector": "mainView #doneNavigationView"
+            },
+            "name": "doneView",
+            "designerId": "ec294220-dc1d-478c-831e-8d6ff9a1f854"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
                 "ref": "todoView",
                 "selector": "mainView #todoNavigationView",
                 "xtype": null
@@ -65,7 +79,6 @@
                     "if (record.get('isCompleted')) {",
                     "    var completedStore = Ext.getStore('CompletedStore');",
                     "    completedStore.add(record);",
-                    "    console.log('completedStore.getCount():' + completedStore.getCount());",
                     "}",
                     "store.sync();",
                     "store.load();",
@@ -88,14 +101,23 @@
                 "designer|targetType": "Ext.Button",
                 "fn": "onDeleteButtonTap",
                 "implHandler": [
-                    "var detailView = this.getDetailView(),",
-                    "    record = detailView.getRecord(),",
+                    "var record = this.getDetailView().getRecord(),",
+                    "    store = null,",
+                    "    navView = null;",
+                    "",
+                    "console.log(record.data);",
+                    "if (record.get('isCompleted')) {",
+                    "    store = Ext.getStore('CompletedStore');",
+                    "    navView = this.getDoneView();",
+                    "} else {",
                     "    store = Ext.getStore('TaskStore');",
+                    "    navView = this.getTodoView();",
+                    "}",
+                    "",
                     "store.remove(record);",
                     "store.sync();",
-                    "console.log('store.getCount():' + store.getCount());",
                     "",
-                    "this.getTodoView().pop();"
+                    "navView.pop();"
                 ],
                 "name": "tap"
             },
